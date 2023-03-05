@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dependencies>
+
+    <registries>
+        <registry name="Packages from jillej"
+                  url="https://npm.cloudsmith.io/jillejr/newtonsoft-json-for-unity">
+            <scopes>
+                <scope>jillejr</scope>
+            </scopes>
+        </registry>
+    </registries>
+    
+    <androidPackages>
+        <androidPackage spec="com.google.android.gms:play-services-ads-identifier:+"/>
+    </androidPackages>
+
+</dependencies>

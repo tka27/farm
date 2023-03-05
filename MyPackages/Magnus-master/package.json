@@ -1,0 +1,9 @@
+{
+  "name": "com.wannaplay.magnus-sdk.core",
+  "version": "0.0.7",
+  "displayName": "Magnus SDK Core",
+  "dependencies": {
+    "jillejr.newtonsoft.json-for-unity": "12.0.201",
+    "com.google.external-dependency-manager": "1.2.164"
+  }
+}

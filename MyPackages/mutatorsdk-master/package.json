@@ -1,0 +1,9 @@
+{
+  "name": "com.wannaplay.magnus-sdk.mutator",
+  "version": "0.0.3",
+  "displayName": "Magnus SDK Mutator",
+  "dependencies": {
+    "com.wannaplay.magnus-sdk.core": "0.0.2",
+    "jillejr.newtonsoft.json-for-unity": "12.0.201"
+  }
+}
