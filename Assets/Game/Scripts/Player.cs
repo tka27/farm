@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +7,7 @@ namespace Game.Scripts
     {
         public static Player Instance { get; private set; }
         [field: SerializeField] public Inventory.Inventory Inventory { get; private set; }
+
         [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
 
         protected override void Awake()
