@@ -12,6 +12,7 @@ namespace Game.Scripts
 
         [SerializeField, Min(0.1f)] private float _spawnTime = 10;
         [SerializeField] private Collider _collider;
+        [SerializeField] private ParticleSystem _vfx;
 
 
         public Inventory.Inventory Inventory => _inventory;
@@ -20,6 +21,7 @@ namespace Game.Scripts
         {
             if (!_inventory.RemoveItem(out var removedItem)) return;
             removedItem.SwitchPhysicsRequest?.Invoke(true);
+            _vfx.Play();
         }
 
         private void Start()
