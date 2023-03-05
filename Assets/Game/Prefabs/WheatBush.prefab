@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3672176530814123485}
   - component: {fileID: 3569653683495825359}
   - component: {fileID: 1635243355028819869}
+  - component: {fileID: 1635785767932342454}
   m_Layer: 0
   m_Name: WheatBush
   m_TagString: Untagged
@@ -150,3 +151,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventory: {fileID: 3569653683495825359}
+  _spawnTime: 10
+  _collider: {fileID: 1635785767932342454}
+--- !u!135 &1635785767932342454
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160729801973557095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.5, z: 0}

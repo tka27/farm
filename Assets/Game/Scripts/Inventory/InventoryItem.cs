@@ -9,6 +9,7 @@ namespace Game.Scripts.Inventory
     {
         [field: SerializeField] public ItemType Type { get; private set; }
         [field: SerializeField, Min(0)] public int Price { get; private set; } = 5;
+        [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
 
 
         public Transform Transform { get; private set; }
@@ -21,6 +22,15 @@ namespace Game.Scripts.Inventory
         {
             _cts = new(this.GetCancellationTokenOnDestroy());
             Transform = transform;
+        }
+
+        public void SwitchKinematic(bool value)
+        {
+            Rigidbody.isKinematic = value;
+            if (value) return;
+            const float jumpForce = 400;
+            Rigidbody.AddForce(transform.up * jumpForce + SubLib.Utils.Vector3.DisplaceXZ());
+            Rigidbody.angularVelocity = SubLib.Utils.Vector3.Displace(10);
         }
 
         public async UniTask<bool> MoveTo(Inventory inventory)
