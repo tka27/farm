@@ -4591,7 +4591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5c3b27025fe323647bfd8cc6d6e5c6ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5491,12 +5491,12 @@ PrefabInstance:
     - target: {fileID: 3853081146963651391, guid: 5d64fa560b50b654c94b03c69029e49d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -16.5
       objectReference: {fileID: 0}
     - target: {fileID: 3853081146963651391, guid: 5d64fa560b50b654c94b03c69029e49d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -39.4
       objectReference: {fileID: 0}
     - target: {fileID: 3853081146963651391, guid: 5d64fa560b50b654c94b03c69029e49d,
         type: 3}
@@ -5511,6 +5511,26 @@ PrefabInstance:
     - target: {fileID: 3853081146963651391, guid: 5d64fa560b50b654c94b03c69029e49d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930765437810089575, guid: 5d64fa560b50b654c94b03c69029e49d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930765437810089575, guid: 5d64fa560b50b654c94b03c69029e49d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930765437810089575, guid: 5d64fa560b50b654c94b03c69029e49d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930765437810089575, guid: 5d64fa560b50b654c94b03c69029e49d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

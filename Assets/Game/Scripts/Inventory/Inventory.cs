@@ -11,6 +11,7 @@ namespace Game.Scripts.Inventory
         public event System.Action OnAddItem;
         public event System.Action OnRemoveItem;
         public event System.Action<InventoryItem> OnRemoveItemWithItem;
+        public event System.Action<InventoryItem> OnAddItemWithItem;
 
         [field: SerializeField] public TransitionCurves Curves { get; private set; }
         [field: SerializeField] public bool LimitTypeSpace { get; private set; }
@@ -49,6 +50,7 @@ namespace Game.Scripts.Inventory
 
             _items.Add(item);
             SetItemParent(item);
+            OnAddItemWithItem?.Invoke(item);
             OnAddItem?.Invoke();
             return true;
         }

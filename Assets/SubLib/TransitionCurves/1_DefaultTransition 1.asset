@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72852224573e1cd46be850a8237e44c4, type: 3}
-  m_Name: 1_DefaultTransition
+  m_Name: 1_DefaultTransition 1
   m_EditorClassIdentifier: 
   <Duration>k__BackingField: 0.4
   <MoveCurve>k__BackingField:

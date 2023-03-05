@@ -1,7 +1,7 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using SubLib.Async;
 using SubLib.Extensions;
-using Unity.Collections;
 
 namespace Game.Scripts.Inventory
 {
@@ -19,7 +19,7 @@ namespace Game.Scripts.Inventory
         public Inventory LastProvider { get; private set; }
 
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (_currentProvider != null) return;
 
@@ -30,7 +30,7 @@ namespace Game.Scripts.Inventory
             _timer = new Timer(_defaultItemsFrequency, ReceiveItem);
         }
 
-        private void OnTriggerExit(Collider other)
+        protected virtual void OnTriggerExit(Collider other)
         {
             if (!other.TryGetComponent(out Inventory provider)) return;
             if (_currentProvider != provider) return;
@@ -54,6 +54,12 @@ namespace Game.Scripts.Inventory
                 if (!SelfInventory.HasEmptySlot())
                 {
                     OnFull?.Invoke();
+                    _timer?.Destroy();
+                    return;
+                }
+
+                if (_currentProvider.IsEmpty)
+                {
                     _timer?.Destroy();
                     return;
                 }
