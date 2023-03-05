@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72852224573e1cd46be850a8237e44c4, type: 3}
   m_Name: Resize
   m_EditorClassIdentifier: 
-  <TransitionDuration>k__BackingField: 0.5
+  <Duration>k__BackingField: 0.5
   <MoveCurve>k__BackingField:
     serializedVersion: 2
     m_Curve:
@@ -43,20 +43,29 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
+      inSlope: 1.658144
+      outSlope: 1.658144
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      time: 0.647319
+      value: 1.0733482
+      inSlope: 0.22690709
+      outSlope: 0.22690709
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
+      outWeight: 0.58650076
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.849059
+      outSlope: -0.849059
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46172622
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

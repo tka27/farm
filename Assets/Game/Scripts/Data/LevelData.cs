@@ -1,3 +1,5 @@
+using Game.Scripts.Inventory;
+using SubLib.ObjectPool;
 using UnityEngine;
 
 namespace Game.Scripts.Data
@@ -6,5 +8,7 @@ namespace Game.Scripts.Data
     {
         public static LevelData Instance;
         [field: SerializeField] public Canvas MainCanvas { get; private set; }
+
+        [field: SerializeField] public ObjectPool<InventoryItem> WheatPool { get; private set; }
     }
 }
