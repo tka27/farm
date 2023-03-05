@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _resourceCountText: {fileID: 2246309936140194688}
   _resourceIcon: {fileID: 2246309935366859212}
+  _refreshTime: 0.5
 --- !u!225 &5389134725638783201
 CanvasGroup:
   m_ObjectHideFlags: 0

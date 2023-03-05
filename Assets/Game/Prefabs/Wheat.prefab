@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 0
-  <Price>k__BackingField: 5
+  <Price>k__BackingField: 15
 --- !u!65 &3264411655300401570
 BoxCollider:
   m_ObjectHideFlags: 0
