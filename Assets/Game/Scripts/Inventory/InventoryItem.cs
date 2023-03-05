@@ -9,7 +9,6 @@ namespace Game.Scripts.Inventory
     {
         [field: SerializeField] public ItemType Type { get; private set; }
         [field: SerializeField, Min(0)] public int Price { get; private set; } = 5;
-        [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
 
         public System.Action<bool> SwitchPhysicsRequest;
         public Transform Transform { get; private set; }

@@ -35,5 +35,15 @@ namespace Game.Scripts
 
             StateMachine = new(states, UnitState.Idle);
         }
+        
+        private static readonly int AttackHash = Animator.StringToHash("Attack");
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.TryGetComponent<Bush>(out var bush)) return;
+            if (bush.Inventory.IsEmpty) return;
+
+            Animator.SetTrigger(AttackHash);
+        }
     }
 }
