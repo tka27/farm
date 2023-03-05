@@ -19,7 +19,7 @@ namespace Game.Scripts
         public void DropItem()
         {
             if (!_inventory.RemoveItem(out var removedItem)) return;
-            removedItem.SwitchKinematic(false);
+            removedItem.SwitchPhysicsRequest?.Invoke(true);
         }
 
         private void Start()

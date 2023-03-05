@@ -11,7 +11,7 @@ namespace Game.Scripts.Inventory
         [field: SerializeField, Min(0)] public int Price { get; private set; } = 5;
         [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
 
-
+        public System.Action<bool> SwitchPhysicsRequest;
         public Transform Transform { get; private set; }
         public bool AbleToUse { get; private set; } = true;
 
@@ -24,25 +24,12 @@ namespace Game.Scripts.Inventory
             Transform = transform;
         }
 
-        public void SwitchKinematic(bool value)
-        {
-            Rigidbody.isKinematic = value;
-            if (value) return;
-            const float jumpForce = 400;
-            Rigidbody.AddForce(transform.up * jumpForce + SubLib.Utils.Vector3.DisplaceXZ());
-            Rigidbody.angularVelocity = SubLib.Utils.Vector3.Displace(10);
-        }
-
         public async UniTask<bool> MoveTo(Inventory inventory)
         {
+            if (!inventory.Add(this)) return false;
+
             AbleToUse = false;
             var token = _cts.Create();
-
-            if (!inventory.Add(this))
-            {
-                AbleToUse = true;
-                return false;
-            }
 
             await transform.CurveMoveAsync(inventory.ItemTarget, inventory.Curves, token);
             AbleToUse = true;

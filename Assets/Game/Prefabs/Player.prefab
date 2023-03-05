@@ -31,6 +31,65 @@ Transform:
   m_Father: {fileID: 961943084676903109}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &917239928479862867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5993161061369841276}
+  - component: {fileID: 3009060761985106929}
+  - component: {fileID: 5651835074369663695}
+  m_Layer: 0
+  m_Name: ItemsCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5993161061369841276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917239928479862867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 961943085097059694}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3009060761985106929
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917239928479862867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5651835074369663695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917239928479862867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c6fdec6a484d54aaf962113cf05462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selfInventory: {fileID: 961943084676903110}
 --- !u!1 &946398090156676270
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,10 +383,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7c1f9073eb46cbb4fea903be138df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Curves>k__BackingField: {fileID: 11400000, guid: 49d31fc9592ef12409c3326c68e1f9d9,
+  <Curves>k__BackingField: {fileID: 11400000, guid: 6cd60769718edce4daf8d20aa90e2093,
     type: 2}
   <LimitTypeSpace>k__BackingField: 0
-  <DefaultSize>k__BackingField: 1
+  <DefaultSize>k__BackingField: 40
   <CurrentSize>k__BackingField: 40
   <ItemTarget>k__BackingField: {fileID: 961943084467496372}
   _items: []
@@ -408,6 +467,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 780032438789696178}
+  - {fileID: 5993161061369841276}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1952,6 +2012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42c1f746551694f4ab24dc1d640acc94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c1f746551694f4ab24dc1d640acc94, type: 3}
