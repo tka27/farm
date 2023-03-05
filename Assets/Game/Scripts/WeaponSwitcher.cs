@@ -6,6 +6,6 @@ namespace Game.Scripts
     {
         [SerializeField] private GameObject _weapon;
 
-        public void SwitchWeapon(bool value) => _weapon.SetActive(value);
+        public void SwitchWeapon(int value) => _weapon.SetActive(value > 0);
     }
 }
